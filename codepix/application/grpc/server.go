@@ -10,6 +10,7 @@ import (
 	"github.com/codeedu/imersao/codepix-go/application/usecase"
 	"github.com/jinzhu/gorm"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
 
 func StartGrpcServer(database *gorm.DB, port int) {
@@ -32,8 +33,4 @@ func StartGrpcServer(database *gorm.DB, port int) {
 	if err != nil {
 		log.Fatal("cannot start grpc server", err)
 	}
-}
-
-func NewPixGrpcService(pixUseCase invalid type) {
-	panic("unimplemented")
 }
