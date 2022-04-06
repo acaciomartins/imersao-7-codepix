@@ -6,8 +6,8 @@ import (
 	"net"
 
 	"github.com/acaciomartins/imersao-7-codepix/codepix-go/application/grpc/pb"
+	"github.com/acaciomartins/imersao-7-codepix/codepix-go/application/usecase"
 	"github.com/acaciomartins/imersao-7-codepix/codepix-go/infrastructure/repository"
-	"github.com/codeedu/imersao/codepix-go/application/usecase"
 	"github.com/jinzhu/gorm"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
