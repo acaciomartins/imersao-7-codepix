@@ -33,8 +33,12 @@ var kafkaCmd = &cobra.Command{
 		database := db.ConnectDB(os.Getenv("env"))
 		producer := kafka.NewKafkaProducer()
 
-		//kafka.Publish("Ola Cosumer", "teste", producer, deliveryChan)
+		kafka.Publish("ola Kafka", "teste", producer, deliveryChan)
 		go kafka.DeliveryReport(deliveryChan)
+		// producer := kafka.NewKafkaProducer()
+
+		//kafka.Publish("Ola Cosumer", "teste", producer, deliveryChan)
+		//go kafka.DeliveryReport(deliveryChan)
 
 		kafkaProcessor := kafka.NewKafkaProcessor(database, producer, deliveryChan)
 		kafkaProcessor.Consume()
