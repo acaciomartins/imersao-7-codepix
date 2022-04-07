@@ -5,10 +5,11 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"os"
+
 	"github.com/acaciomartins/imersao-7-codepix/codepix-go/application/grpc"
 	"github.com/acaciomartins/imersao-7-codepix/codepix-go/infrastructure/db"
 	"github.com/spf13/cobra"
-	"os"
 )
 
 var portNumber int
@@ -20,8 +21,6 @@ var grpcCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		database := db.ConnectDB(os.Getenv("env"))
 		grpc.StartGrpcServer(database, portNumber)
-		// database := db.ConnectDB(os.Getenv("env"))
-		// grpc.StartGrpcServer(database, 50051)
 	},
 }
 
