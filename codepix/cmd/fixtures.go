@@ -13,11 +13,12 @@ limitations under the License.
 package cmd
 
 import (
-	"github.com/codeedu/imersao/codepix-go/domain/model"
-	"github.com/codeedu/imersao/codepix-go/infrastructure/db"
-	"github.com/codeedu/imersao/codepix-go/infrastructure/repository"
-	"github.com/spf13/cobra"
 	"os"
+
+	"github.com/acaciomartins/imersao-7-codepix/codepix-go/domain/model"
+	"github.com/acaciomartins/imersao-7-codepix/codepix-go/infrastructure/db"
+	"github.com/acaciomartins/imersao-7-codepix/codepix-go/infrastructure/repository"
+	"github.com/spf13/cobra"
 )
 
 // fixturesCmd represents the fixtures command
